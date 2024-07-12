@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova proposta 1</title>
+    <style>
+        header {
+            width: 100%;
+            border: solid #c0c0c0 1px;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            background-color: #edf5f7;
+            text-align: center;
+        }
+
+        main {
+            margin: 120px;
+            padding-top: 30px;
+            padding-left: 20px;
+        }
+
+        body{
+            background-color: cadetblue;
+        }
+
+        button:hover {
+            cursor: pointer;
+            color: grey;
+        
+        }
+
+        button{
+            margin-left: 930px;
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Imagens aleatorias</h1>
+    </header>
+    <main>
+        <div id="mini"></div>
+    </main>
+
+    <button onclick="ajustarTamanhos()">Fotos</button>
+
+    <script>
+      function ajustarTamanhos(){ 
+
+    // Chama a função adicionarImagem para adicionar cada imagem à div
+    adicionarImagem("imagens 2.jpg");
+    adicionarImagem("imagens 3.jpg");
+    adicionarImagem("imagens 4.jpeg");
+    adicionarImagem("imagens 7.jpeg");
+    adicionarImagem("imagens 6.jpg");
+
+    // Função para adicionar as imagens à div
+      function adicionarImagem(src) {
+      
+        // Cria a variavel divMini da div com o id mini
+        var divMini = document.getElementById("mini");
+        
+        // Cria um novo elemento de imagem
+        var img = document.createElement("img");
+
+        // Define o caminho da imagem
+        img.src = src;
+
+        // Define o texto alternativo para a imagem
+        img.alt = "Imagens";
+
+        // Adiciona uma classe à imagem 
+        img.className = "img";
+
+        // Define a largura da imagem como 300 pixels
+        img.style.width = 300 + "px";
+
+        // Define a altura da imagem como 300 pixels
+        img.style.height = "300px";
+
+        // Adiciona uma margem à direita da imagem para espaçamento
+        img.style.marginRight = "10px";
+
+        // Adiciona uma borda arredondada à imagem
+        img.style.borderRadius = "10%";
+
+        // Define a cor da borda da imagem como preta
+        img.style.borderColor = "black";
+
+        // Alinha as imagens pela parte superior
+        img.style.verticalAlign = "top";
+
+        // Define a exibição da imagem como inline-block para posicionamento horizontal
+        img.style.display = "inline-block";
+
+        // Adiciona as imagens dentro da div "mini"
+        divMini.appendChild(img);
+    }
+}
+    </script>
+</body>
+</html>
